@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snayjk
+  annotations:
+    orgs.k8s.snyk.io/v1: 9ff4ae2d-3cac-4259-97de-ea3a395f41ac
+  labels:
+    app: snayjk
+spec:
+  template:
+    metadata:
+      name: snayjk-pod
+      labels:
+        app.kubernetes.io/instance: snayjk
+        app.kubernetes.io/name: snayjk
+    spec:
+      containers:
+        - name: snayjk-container
+          image: purpledobie/snayjk
+          ports:
+          - containerPort: 3000
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: snayjk
+      app.kubernetes.io/name: snayjk

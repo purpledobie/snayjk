@@ -8,3 +8,5 @@ In the demo, we look specifically at the container components and choices and us
 
 The original source for this game is the Node 8 multiplayer Snake game:
 `https://github.com/simondiep/node-multiplayer-snake.git`
+
+Uses GH Actions to build and test the image; Harness to deploy.

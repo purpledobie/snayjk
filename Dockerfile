@@ -1,4 +1,4 @@
-FROM node:16.0.0-buster
+FROM node:16.6.2-buster
 
 LABEL "org.opencontainers.image.source"="https://github.com/purpledobie/snayjk"
 

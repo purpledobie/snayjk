@@ -53,37 +53,37 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
           labels: |
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-            org.opencontainers.image.source=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY
+            org.opencontainers.image.source=${{ env.GITHUB_SERVER_URL/env.GITHUB_REPOSITORY }}
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.licenses=${{ github.event.repository.license.name }}
-      - name: Monitor published image for vulnerabilities with Snyk
-        uses: snyk/actions/docker@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: monitor
-          image: ${{ steps.prep.outputs.tag }}
-          args: --file=Dockerfile --app-vulns --project-name=${{ steps.prep.outputs.tag }}
-        if: github.event_name != 'pull_request'
-      - name: Test the image with Snyk for high-severity vulnerabilities
-        uses: snyk/actions/docker@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          image: ${{ steps.prep.outputs.tag }}
-          args: --file=Dockerfile --severity-threshold=high
-        if: github.event_name == 'pull_request'
-      - name: Output a SARIF file from Snyk
-        continue-on-error: true
-        uses: snyk/actions/docker@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          sarif: true
-          image: ${{ steps.prep.outputs.tag }}
-          args: --file=Dockerfile
-        if: github.ref == 'refs/heads/main'
+#      - name: Monitor published image for vulnerabilities with Snyk
+#        uses: snyk/actions/docker@master
+#        env:
+#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+#        with:
+#          command: monitor
+#          image: ${{ steps.prep.outputs.tag }}
+#          args: --file=Dockerfile --app-vulns --project-name=${{ steps.prep.outputs.tag }}
+#        if: github.event_name != 'pull_request'
+#      - name: Test the image with Snyk for high-severity vulnerabilities
+#        uses: snyk/actions/docker@master
+#        env:
+#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+#        with:
+#          image: ${{ steps.prep.outputs.tag }}
+#          args: --file=Dockerfile --severity-threshold=high
+#        if: github.event_name == 'pull_request'
+#      - name: Output a SARIF file from Snyk
+#        continue-on-error: true
+#        uses: snyk/actions/docker@master
+#        env:
+#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+#        with:
+#          sarif: true
+#          image: ${{ steps.prep.outputs.tag }}
+#          args: --file=Dockerfile
+#        if: github.ref == 'refs/heads/main'
       - name: Push
         uses: docker/build-push-action@v2
         with:
@@ -93,7 +93,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
           labels: |
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-            org.opencontainers.image.source=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY
+            org.opencontainers.image.source=${{ env.GITHUB_SERVER_URL/env.GITHUB_REPOSITORY }}
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
         if: github.event_name != 'pull_request'

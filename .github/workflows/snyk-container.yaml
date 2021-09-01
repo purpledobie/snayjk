@@ -53,7 +53,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
           labels: |
             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
-            org.opencontainers.image.source="${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}"
+            org.opencontainers.image.source=${{ env.GITHUB_SERVER_URL }}/${{ env.GITHUB_REPOSITORY }}
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.licenses=${{ github.event.repository.license.name }}

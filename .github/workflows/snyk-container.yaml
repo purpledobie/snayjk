@@ -1,10 +1,6 @@
 name: Build, test and publish
 
-on:
-  push:
-    branches: main
-    tags:
-      - 'v*.*.*'
+on: [push, pull_request]
 
 jobs:
   build:
@@ -73,6 +69,11 @@ jobs:
         with:
           image: ${{ steps.prep.outputs.tag }}
           args: --file=Dockerfile --severity-threshold=high
+        if: github.event_name == 'pull_request'
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v1
+          with:
+            sarif_file: snyk.sarif
         if: github.event_name == 'pull_request'
 #      - name: Output a SARIF file from Snyk
 #        continue-on-error: true

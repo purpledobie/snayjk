@@ -57,23 +57,23 @@ jobs:
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
             org.opencontainers.image.licenses=${{ github.event.repository.license.name }}
-#      - name: Monitor published image for vulnerabilities with Snyk
-#        uses: snyk/actions/docker@master
-#        env:
-#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-#        with:
-#          command: monitor
-#          image: ${{ steps.prep.outputs.tag }}
-#          args: --file=Dockerfile --app-vulns --project-name=${{ steps.prep.outputs.tag }}
-#        if: github.event_name != 'pull_request'
-#      - name: Test the image with Snyk for high-severity vulnerabilities
-#        uses: snyk/actions/docker@master
-#        env:
-#          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-#        with:
-#          image: ${{ steps.prep.outputs.tag }}
-#          args: --file=Dockerfile --severity-threshold=high
-#        if: github.event_name == 'pull_request'
+      - name: Monitor published image for vulnerabilities with Snyk
+        uses: snyk/actions/docker@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
+          image: ${{ steps.prep.outputs.tag }}
+          args: --file=Dockerfile --project-name=${{ steps.prep.outputs.tag }}
+        if: github.event_name != 'pull_request'
+      - name: Test the image with Snyk for high-severity vulnerabilities
+        uses: snyk/actions/docker@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          image: ${{ steps.prep.outputs.tag }}
+          args: --file=Dockerfile --severity-threshold=high
+        if: github.event_name == 'pull_request'
 #      - name: Output a SARIF file from Snyk
 #        continue-on-error: true
 #        uses: snyk/actions/docker@master

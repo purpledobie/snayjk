@@ -1,7 +1,7 @@
 FROM node:16.0.0-buster
 
 RUN apt-get update &&\
-    apt-get install -y git vim &&\
+    apt-get install -y git vim  &&\
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app

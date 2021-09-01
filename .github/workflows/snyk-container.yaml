@@ -63,6 +63,7 @@ jobs:
           args: --file=Dockerfile --project-name=${{ steps.prep.outputs.tag }}
         if: github.event_name != 'pull_request'
       - name: Test the image with Snyk for high-severity vulnerabilities
+        continue-on-error: true
         uses: snyk/actions/docker@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}

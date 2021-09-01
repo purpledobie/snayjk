@@ -72,8 +72,8 @@ jobs:
         if: github.event_name == 'pull_request'
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
-          with:
-            sarif_file: snyk.sarif
+        with:
+          sarif_file: snyk.sarif
         if: github.event_name == 'pull_request'
 #      - name: Output a SARIF file from Snyk
 #        continue-on-error: true

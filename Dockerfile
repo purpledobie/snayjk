@@ -1,4 +1,4 @@
-FROM node:16.6.2-bullseye-slim
+FROM node:16.0.0-buster
 
 RUN apt-get update &&\
     apt-get install -y git vim  &&\

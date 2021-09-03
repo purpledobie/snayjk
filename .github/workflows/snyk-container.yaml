@@ -81,7 +81,8 @@ jobs:
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: snyk.sarif
- #      - name: Output a SARIF file from Snyk
+        if: github.event_name == 'pull_request'
+#      - name: Output a SARIF file from Snyk
 #        continue-on-error: true
 #        uses: snyk/actions/docker@master
 #        env:

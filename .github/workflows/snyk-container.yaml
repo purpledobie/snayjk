@@ -7,9 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:
-    branches:
-      - main
 
 jobs:
   build:
@@ -43,9 +40,8 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-        if: github.event_name  == 'pull_request' || github.event_name == 'push'
       - name: Login to container registry
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -57,7 +53,8 @@ jobs:
           tags: ${{ steps.prep.outputs.tags }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-          labels:\             org.opencontainers.image.created=${{ steps.prep.outputs.created }}
+          labels: |
+            org.opencontainers.image.created=${{ steps.prep.outputs.created }}
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
@@ -70,7 +67,7 @@ jobs:
           command: monitor
           image: ${{ steps.prep.outputs.tag }}
           args: --file=Dockerfile --project-name=${{ steps.prep.outputs.tag }} --policy-path=.snyk
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'
       - name: Test the image with Snyk for high-severity vulnerabilities
         continue-on-error: true
         uses: snyk/actions/docker@master
@@ -79,12 +76,12 @@ jobs:
         with:
           image: ${{ steps.prep.outputs.tag }}
           args: --file=Dockerfile --severity-threshold=high --policy-path=.snyk
-        if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'pull_request'
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v1
         with:
           sarif_file: snyk.sarif
-        if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'pull_request'
 #      - name: Output a SARIF file from Snyk
 #        continue-on-error: true
 #        uses: snyk/actions/docker@master
@@ -107,4 +104,4 @@ jobs:
             org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
             org.opencontainers.image.revision=${{ github.sha }}
-        if: github.event_name == 'push'
+        if: github.event_name != 'pull_request'

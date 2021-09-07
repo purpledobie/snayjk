@@ -8,8 +8,14 @@ In the demo, we look specifically at the container components and choices and us
 
 The original source for this game is the Node 8 multiplayer Snake game:
 `https://github.com/simondiep/node-multiplayer-snake.git`
+The original README for the source code is available here as [README-original.md](./README-original.md)
 
-Uses GH Actions to build and test the image; Harness to deploy.
+The game code here is almost 100% the same code, with the exception of some changes to the color scheme and some UI wording. Added to the code for the purposes of this demo:
+* The game runs in a container via the [Dockerfile](./Dockerfile)
+* [GitHub Actions](./.github/workflows/snyk-container.yaml) are used to build, test and push the image to Docker Hub
+* [Harness](https://harness.io) is used to deploy new versions of the game to a Kubernetes cluster
+* [Snyk](https://snyk.io/product/container-vulnerability-management/) is used to test the container images and with that there is some setup policy code for the Snyk Kubernetes monitor as well as a `.snyk` policy file to auto-ignore some vulnerabilities.
+* There is also a [deployment.yaml](./deployment.yaml) included here for Kubernetes, although in the demo the deployment is controlled by Harness
 
 
 ## Snyk Ignores
@@ -17,4 +23,4 @@ The demo ignores issues that are present and unfixed in a slim variant of the or
 ```
 snyk container test node:16.6.2-bullseye-slim --json | jq  '[.vulnerabilities[] | .id] | unique | .[]' | xargs -L1 -I'{}' snyk ignore --id='{}' --reason="Unfixed base image vulns from preferred slim variant"
 ```
-For extra credit, the original base could be scanned, the output parsed for the base image recs, and a preferred image could be selected automatically and scanned.
+For extra credit, one could scan an image, parse the output for the base image recs, select a preferred image automatically, then scan that image with code similar to this to generate the `.snyk` file.

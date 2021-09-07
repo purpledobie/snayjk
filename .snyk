@@ -4,192 +4,197 @@ version: v1.22.1
 ignore:
   SNYK-DEBIAN11-APT-522585:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:31.122Z
-        created: 2021-09-01T02:39:31.127Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:47.931Z
+        created: 2021-09-07T15:03:47.949Z
   SNYK-DEBIAN11-COREUTILS-514776:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:33.262Z
-        created: 2021-09-01T02:39:33.266Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:49.089Z
+        created: 2021-09-07T15:03:49.106Z
   SNYK-DEBIAN11-COREUTILS-527269:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:35.513Z
-        created: 2021-09-01T02:39:35.521Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:50.223Z
+        created: 2021-09-07T15:03:50.235Z
   SNYK-DEBIAN11-GLIBC-1296898:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:36.667Z
-        created: 2021-09-01T02:39:36.678Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:51.348Z
+        created: 2021-09-07T15:03:51.363Z
   SNYK-DEBIAN11-GLIBC-517034:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:37.831Z
-        created: 2021-09-01T02:39:37.842Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:52.478Z
+        created: 2021-09-07T15:03:52.497Z
   SNYK-DEBIAN11-GLIBC-521063:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:39.068Z
-        created: 2021-09-01T02:39:39.081Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:53.650Z
+        created: 2021-09-07T15:03:53.662Z
   SNYK-DEBIAN11-GLIBC-521199:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:40.228Z
-        created: 2021-09-01T02:39:40.234Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:54.975Z
+        created: 2021-09-07T15:03:54.987Z
   SNYK-DEBIAN11-GLIBC-522385:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:41.346Z
-        created: 2021-09-01T02:39:41.353Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:56.144Z
+        created: 2021-09-07T15:03:56.153Z
   SNYK-DEBIAN11-GLIBC-527807:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:43.345Z
-        created: 2021-09-01T02:39:43.355Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:57.399Z
+        created: 2021-09-07T15:03:57.407Z
   SNYK-DEBIAN11-GLIBC-529848:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:44.553Z
-        created: 2021-09-01T02:39:44.560Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:58.551Z
+        created: 2021-09-07T15:03:58.567Z
   SNYK-DEBIAN11-GLIBC-531451:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:45.686Z
-        created: 2021-09-01T02:39:45.698Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:03:59.705Z
+        created: 2021-09-07T15:03:59.725Z
   SNYK-DEBIAN11-GLIBC-531492:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:46.834Z
-        created: 2021-09-01T02:39:46.846Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:00.897Z
+        created: 2021-09-07T15:04:00.905Z
   SNYK-DEBIAN11-GLIBC-532215:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:48.154Z
-        created: 2021-09-01T02:39:48.166Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:02.086Z
+        created: 2021-09-07T15:04:02.096Z
   SNYK-DEBIAN11-GNUTLS28-515971:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:49.823Z
-        created: 2021-09-01T02:39:49.834Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:03.247Z
+        created: 2021-09-07T15:04:03.265Z
   SNYK-DEBIAN11-KRB5-1568499:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:51.460Z
-        created: 2021-09-01T02:39:51.471Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:04.381Z
+        created: 2021-09-07T15:04:04.394Z
   SNYK-DEBIAN11-KRB5-519904:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:53.349Z
-        created: 2021-09-01T02:39:53.355Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:05.498Z
+        created: 2021-09-07T15:04:05.517Z
   SNYK-DEBIAN11-KRB5-524883:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:54.482Z
-        created: 2021-09-01T02:39:54.493Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:06.878Z
+        created: 2021-09-07T15:04:06.891Z
   SNYK-DEBIAN11-LIBGCRYPT20-523947:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:56.912Z
-        created: 2021-09-01T02:39:56.924Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:09.515Z
+        created: 2021-09-07T15:04:09.530Z
   SNYK-DEBIAN11-LIBSEPOL-1315627:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:39:59.391Z
-        created: 2021-09-01T02:39:59.404Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:10.725Z
+        created: 2021-09-07T15:04:10.743Z
   SNYK-DEBIAN11-LIBSEPOL-1315629:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:02.224Z
-        created: 2021-09-01T02:40:02.232Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:13.550Z
+        created: 2021-09-07T15:04:13.559Z
   SNYK-DEBIAN11-LIBSEPOL-1315635:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:04.666Z
-        created: 2021-09-01T02:40:04.673Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:14.696Z
+        created: 2021-09-07T15:04:14.715Z
   SNYK-DEBIAN11-LIBSEPOL-1315641:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:07.147Z
-        created: 2021-09-01T02:40:07.161Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:15.855Z
+        created: 2021-09-07T15:04:15.873Z
   SNYK-DEBIAN11-OPENSSL-1569405:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:09.588Z
-        created: 2021-09-01T02:40:09.599Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:16.983Z
+        created: 2021-09-07T15:04:16.998Z
   SNYK-DEBIAN11-OPENSSL-1569408:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:12.649Z
-        created: 2021-09-01T02:40:12.663Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:18.114Z
+        created: 2021-09-07T15:04:18.123Z
   SNYK-DEBIAN11-OPENSSL-518334:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:15.148Z
-        created: 2021-09-01T02:40:15.155Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:19.334Z
+        created: 2021-09-07T15:04:19.344Z
   SNYK-DEBIAN11-OPENSSL-525332:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:17.613Z
-        created: 2021-09-01T02:40:17.630Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:20.483Z
+        created: 2021-09-07T15:04:20.501Z
   SNYK-DEBIAN11-PCRE3-523392:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:21.024Z
-        created: 2021-09-01T02:40:21.039Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:21.617Z
+        created: 2021-09-07T15:04:21.628Z
   SNYK-DEBIAN11-PCRE3-525075:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:22.909Z
-        created: 2021-09-01T02:40:22.927Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:22.798Z
+        created: 2021-09-07T15:04:22.813Z
   SNYK-DEBIAN11-PCRE3-529298:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:24.379Z
-        created: 2021-09-01T02:40:24.387Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:24.527Z
+        created: 2021-09-07T15:04:24.546Z
   SNYK-DEBIAN11-PCRE3-529490:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:25.829Z
-        created: 2021-09-01T02:40:25.839Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:25.697Z
+        created: 2021-09-07T15:04:25.715Z
   SNYK-DEBIAN11-PCRE3-572353:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:27.390Z
-        created: 2021-09-01T02:40:27.398Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:26.845Z
+        created: 2021-09-07T15:04:26.862Z
   SNYK-DEBIAN11-PERL-532614:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:28.886Z
-        created: 2021-09-01T02:40:28.900Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:28.026Z
+        created: 2021-09-07T15:04:28.045Z
   SNYK-DEBIAN11-SHADOW-526940:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:30.345Z
-        created: 2021-09-01T02:40:30.359Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:29.441Z
+        created: 2021-09-07T15:04:29.460Z
   SNYK-DEBIAN11-SHADOW-528840:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:31.861Z
-        created: 2021-09-01T02:40:31.873Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:31.824Z
+        created: 2021-09-07T15:04:31.843Z
   SNYK-DEBIAN11-SHADOW-539870:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:33.333Z
-        created: 2021-09-01T02:40:33.345Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:33.365Z
+        created: 2021-09-07T15:04:33.379Z
   SNYK-DEBIAN11-SYSTEMD-1291054:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:34.829Z
-        created: 2021-09-01T02:40:34.852Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:34.855Z
+        created: 2021-09-07T15:04:34.874Z
   SNYK-DEBIAN11-SYSTEMD-524969:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:36.304Z
-        created: 2021-09-01T02:40:36.312Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:36.389Z
+        created: 2021-09-07T15:04:36.403Z
   SNYK-DEBIAN11-TAR-523480:
     - '*':
-        reason: Unfixed base image vulns from preferred slim variant
-        expires: 2021-10-01T02:40:38.078Z
-        created: 2021-09-01T02:40:38.094Z
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:37.850Z
+        created: 2021-09-07T15:04:37.863Z
+  SNYK-DEBIAN11-LIBGCRYPT20-1582897:
+    - '*':
+        reason: Unfixed base image vulns from preferred bullseye-slim image
+        expires: 2021-10-07T15:04:08.105Z
+        created: 2021-09-07T15:04:08.115Z
 patch: {}

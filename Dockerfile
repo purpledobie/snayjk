@@ -1,4 +1,4 @@
-FROM node:16.0.0-buster
+FROM node:16.13.2-buster
 
 RUN apt-get update &&\
     apt-get install -y git vim  &&\

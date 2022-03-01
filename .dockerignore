@@ -1,0 +1,8 @@
+.git/
+node_modules/
+harness/
+test/
+Dockerfile
+.idea/
+.github/
+terraform/

@@ -5,6 +5,7 @@ workload_events {
 	input.metadata.namespace != "snyk-monitor"
 	input.metadata.namespace != "harness"
 	input.metadata.namespace != "harness-delegate"
+	input.metadata.namespace != "sysdig-agent"
 	input.kind != "Job"
 	input.kind != "Pod"
 }

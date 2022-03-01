@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: snayjk-container
-          image: purpledobie/snayjk
+          image: purpledobie/snayjk:base-fix
           ports:
           - containerPort: 3000
   selector:
